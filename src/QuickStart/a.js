@@ -4,6 +4,6 @@ import React, { Component } from 'react';
 
 export default class Aa extends Component {
     render() {
-        return <h1>Hello, {this.props.name}</h1>;
+        return <h1>Hello, {this.props.names}</h1>;
     }
-}
+}									

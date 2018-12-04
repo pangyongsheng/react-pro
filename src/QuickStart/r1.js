@@ -7,12 +7,13 @@ import Cc from './c'
 
 export default class Aa extends Component {
     render() {
-        return <Router>
+        return 
+        <Router>
         	<nav>
         		<Link to="/">首页</Link>
-		   		<Link to="/b">电影</Link>
+		   		<Link to="/b">时钟</Link>
 		    	<Link to="/c">关于</Link>
-		    	<Route exact path="/" component={Ca}></Route>
+		    	<Route exact path="/"  component={Ca}></Route>
 		    	<Route path="/b" component={Cb}></Route>
 		    	<Route path="/c" component={Cc}></Route>
         	</nav>

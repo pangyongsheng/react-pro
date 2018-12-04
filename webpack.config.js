@@ -13,7 +13,7 @@ module.exports = (env, argv) => {
             path.join(__dirname, './src/index.js')
         ],
         devServer: {
-            port: 3000, //端口号
+            port: 3003, //端口号
         },
         module: {
             rules: [{
@@ -22,6 +22,10 @@ module.exports = (env, argv) => {
                     use: {
                         loader: "babel-loader"
                     }
+                },
+                {
+                    test: /\.tsx?$/,
+                    loaders: ['babel-loader', 'ts-loader']
                 },
                 {
                     test: /\.html$/,
@@ -68,6 +72,9 @@ module.exports = (env, argv) => {
                 filename: "[name].css",
                 chunkFilename: "[id].css"
             })
-        ]
+        ],
+        resolve: {
+            extensions: ['.ts', '.tsx', '.js']
+        }
     }
 };

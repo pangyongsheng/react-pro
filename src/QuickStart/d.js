@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 //条件渲染
-export default class Aa extends Component {
+class Aa extends Component {
     constructor(props) {
         super(props);
     }
@@ -15,3 +15,16 @@ export default class Aa extends Component {
         return this.greeting();
     }
 }
+
+
+
+export default class Dd extends Component {
+    render(){
+        return(
+            <div>
+                <Aa isLoggedIn={true}/>
+                <Aa isLoggedIn={false}/>
+            </div>
+        )
+    }
+} 

@@ -1,0 +1,2 @@
+[1213/113132.575:ERROR:http_transport_win.cc(268)] WinHttpSendRequest: 操作超时  (0x2ee2)
+[1213/142408.679:ERROR:http_transport_win.cc(268)] WinHttpSendRequest: 操作超时  (0x2ee2)

@@ -3,18 +3,15 @@ import React, { Component } from 'react';
 //元素变量条件渲染
 
 function LoginButton(props) {
-    return ( <
-        button onClick = { props.onClick } >
-        Login <
-        /button>
-    );
+    return (<button onClick = { props.onClick } >
+            Login 
+        </button>);
 }
 
 function LogoutButton(props) {
-    return ( <
-        button onClick = { props.onClick } >
-        Logout <
-        /button>
+    return (<button onClick = { props.onClick } >
+        Logout 
+        </button>
     );
 }
 
@@ -52,16 +49,12 @@ export default class Aa extends Component {
 
     render() {
         const isLoggedIn = this.state.isLoggedIn;
-
         let button = null;
         if (isLoggedIn) {
-            button = < LogoutButton onClick = { this.handleLogoutClick }
-            />;
+            button = < LogoutButton onClick = { this.handleLogoutClick}/>;
         } else {
-            button = < LoginButton onClick = { this.handleLoginClick }
-            />;
+            button = < LoginButton onClick = { this.handleLoginClick}/>;
         }
-
         return ( <div ><Greeting isLoggedIn = { isLoggedIn }/> { button } </div>);
     }
 }

@@ -3,39 +3,33 @@
  *
 */
 import React , { Component } from 'react';
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+import {  Link, Route, Redirect,Switch} from 'react-router-dom';
+import { Layout } from 'element-react';
+import 'element-theme-default';
 
-import Qa from '../QuickStart/a'
-import Qb from '../QuickStart/b'
-import Qc from '../QuickStart/c'
-import Qd from '../QuickStart/d'
-import Qe from '../QuickStart/e'
-import Qf from '../QuickStart/f'
-import Qg from '../QuickStart/g'
-import Qh from '../QuickStart/h'
-import Qi from '../QuickStart/i'
-import Qj from '../QuickStart/j'
-import Qk from '../QuickStart/k'
-import Ql from '../QuickStart/l'
-import Qm from '../QuickStart/m'
-import Qn from '../QuickStart/n'
 
+
+import Head from './header'
+import MenuLeft from './menuLeft'
+import MenuRight from './menuRight'
+import item from './item'
+
+import "../styles/menu.less"
 
 export default class Aa extends Component {
     render() {
-        return <Router>
-        	<div>
-	        	<nav className="nav">
-	        		<Link to="/">组件</Link>
-			   		<Link to="/b">state,生命周期</Link>
-			    	<Link to="/c">事件</Link>
-			    </nav>
-			    <div className="contain">
-			    	<Route exact path="/"  component={Qa}></Route>
-			    	<Route path="/b" component={Qb}></Route>
-			    	<Route path="/c" component={Qc}></Route>
-			    </div>
-        	</div>
-		</Router>
+        return  <React.Fragment>
+         	<Layout.Row className="menu">
+	        	<Head></Head>
+	        	<Layout.Row>
+		        	<Layout.Col span="4">
+		        		<MenuLeft list={item}/>
+					</Layout.Col>
+					<Layout.Col span="20">
+					    <MenuRight list={item}/>
+		        	</Layout.Col>
+		        </Layout.Row>
+	        </Layout.Row>
+		 </React.Fragment>
     }
 }

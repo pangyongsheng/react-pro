@@ -28,11 +28,12 @@ const styles = {
         overflow: "hidden",
         justifyContent: "center",
         alignItems: "center",
-        position: "absolute"
+        position: "absolute",
+        display:"flex"
     },
 
     text: {
-        fontSize: 11,
+        fontSize: "16px",
         color: "#888"
     }
 }
@@ -40,18 +41,17 @@ const styles = {
 const deg = number => `${number}deg`;
 //disabled
 function Disabled(props){
-	let { radius , disabledText } = props.data;
+	let { radius , disabledText ,percent} = props.data;
 	let diameter = radius * 2;
 
 	return (
-		<div>
-			<div style={{
+		<div style={{
 				...styles.circle,
 				width:diameter,
 				height:diameter,
 				borderRadius:radius
-			}}/>
-			<span>{styles.text}</span>
+			}}>
+			<span style={styles.text}>{parseInt(percent)}%</span>
 		</div>
 	);
 }
@@ -86,7 +86,7 @@ function LeftTransformer(props) {
     let { radius, rotate, color, bgcolor, percent } = props.data;
     let diameter = radius * 2;
     let half = percent >= 50;
-    let leftTransformerDegree = deg(half ? (percent - 50) * 3.6 : 180);
+    let leftTransformerDegree = deg(half ? (percent - 50) * 3.6 : 0);
 
     return (
         <div
@@ -136,7 +136,7 @@ function InnerCircle(props){
 			{children ? (
 				children
 			):(
-				<span style={{...styles.text,textStyle}}>{percent}%</span> 
+				<span style={{...styles.text,...textStyle}}>{parseInt(percent)}%</span> 
 			)}
 		</div>
 	)
@@ -144,26 +144,19 @@ function InnerCircle(props){
 //圆形进度条组件
 export default class _circle extends Component{
 	static defaultProps={
-		textStyle: [],
-		percent: 0,
-		borderWidth: 2,
+		radius:80,
+		percent: 30,
+		borderWidth: 5,
 		bgcolor: "#e2e3e3",
+		color:"#00a100",
 		innerColor: "#fff",
-		rotate: 0
+		rotate: 0,
+		textStyle: {},
 	}
 
 	constructor(props){
 		super(props);
-
-		this.state = {
-			score : 0
-		}
-
 		//window.$instanceMap.set(this.state.id, this);
-	}
-
-	componDidMount(){
-		
 	}
 
 	render(){
@@ -193,24 +186,24 @@ export default class _circle extends Component{
 
 }
 
-// _circle.propTypes = {
-// 	/*进度条颜色*/
-// 	color: React.PropTypes.string,
-// 	/*背景条颜色*/
-// 	bgcolor: React.PropTypes.string,
-// 	/*环内区域背景色*/
-// 	innerColor: React.PropTypes.string, 
-// 	/*外圆半径*/
-// 	radius: React.PropTypes.number,
-// 	/* 进度（百分比分子）*/
-// 	percent: React.PropTypes.number,
-// 	/* 环厚度（同心圆半径差值）*/
-// 	borderWidth: React.Proptypes.number, 
-// 	/*文字样式*/
-// 	textStyle: React.Proptypes.array,
-// 	/*是否可用*/
-// 	disabled: React.PropTypes.bool,
-// 	/*进度环起点与 12 点方向的夹角 0 - 360 度*/
-// 	rotate: React.PropTypes.number
+_circle.propTypes = {
+	/*外圆半径*/
+	radius: PropTypes.number,
+	/* 进度（百分比分子）*/
+	percent: PropTypes.number,
+	/*进度条颜色*/
+	color: PropTypes.string,
+	/*背景条颜色*/
+	bgcolor: PropTypes.string,
+	/*环内区域背景色*/
+	innerColor: PropTypes.string, 
+	/* 环厚度（同心圆半径差值）*/
+	borderWidth: PropTypes.number, 
+	/*文字样式*/
+	textStyle: PropTypes.object,
+	/*是否可用*/
+	disabled: PropTypes.bool,
+	/*进度环起点与 12 点方向的夹角 0 - 360 度*/
+	rotate: PropTypes.number
 
-// }
+}

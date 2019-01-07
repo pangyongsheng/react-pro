@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 
 //列表渲染
-export default class Aa extends Component {
+class Aa extends Component {
 	constructor(props) {
         super(props);
     }
@@ -16,5 +16,11 @@ export default class Aa extends Component {
     }
     render() {
         return this.NumberList();
+    }
+}
+
+export default class Li extends Component {
+    render() {
+        return <Aa numbers={[1,2,3,4,5,6]}/>
     }
 }

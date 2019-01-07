@@ -19,6 +19,7 @@ export default class Event extends Component {
         return ( <div>
         	<button onClick = { this.handleClick } > { this.state.isToggleOn ? 'ON' : 'OFF' } </button>
             <button onClick = { (e) => this.handleClick(e) } > { this.state.isToggleOn ? 'ON' : 'OFF' } </button>
+            <button onTouchStart = { (e) => {console.log(Date.now())} } >点我 ！！！！！ </button>
             </div>
         );
     }

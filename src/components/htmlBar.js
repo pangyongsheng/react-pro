@@ -10,7 +10,6 @@ export default class Aa extends Component {
 			style:this.props.style
 		}
 
-		//window.$instanceMap.set(this.state.id,this);
 	 }
 
 	 setInnerHtml(data){	//修改内容

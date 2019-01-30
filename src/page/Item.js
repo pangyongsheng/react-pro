@@ -20,6 +20,9 @@
 	{Path:"/sb",Comp:C.Sb,Text:"非受控组件"},
 	{Path:"/sc",Comp:C.Sc,Text:"Fragments"},
 	{Path:"/sd",Comp:C.Sd,Text:"Children"},
+	//redux
+	{Path:"/xa",Comp:C.Xa,Text:"redux的使用1,增减计数"},
+	{Path:"/xb",Comp:C.Xb,Text:"redux的使用2"},
 ];
 
 export default item;

@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import productsReducer from './products-reducer';
-import cartReducer from './cart-reducer';
+import todosReducer from './todos';
+import countReducer from './count'
 
 const allReducers = {
-  products: productsReducer,
-  shoppingCart: cartReducer
+  Todos: todosReducer,
+  count: countReducer
 }
 
 const rootReducer = combineReducers(allReducers);

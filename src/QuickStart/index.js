@@ -16,5 +16,7 @@ import Sa from './sa';
 import Sb from './sb';
 import Sc from './sc';
 import Sd from './sd';
+import Xa from './xa';
+import Xb from './xb';
 
-export { A,B,C,D,E,F,G,H,I,J,K,L,M,N,Sa,Sb,Sc,Sd };
+export { A,B,C,D,E,F,G,H,I,J,K,L,M,N,Sa,Sb,Sc,Sd,Xa,Xb };

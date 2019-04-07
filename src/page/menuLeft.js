@@ -11,7 +11,7 @@ import 'element-theme-default';
 
 export default class menuLeft extends Component {
 
-	static defaultProps = {
+	static defaultProps : {
 		list:[
 			{to:"/a",name:"主页"},
 			{to:"/b",name:"state,生命周期"},
@@ -25,7 +25,7 @@ export default class menuLeft extends Component {
 
 	list(){
 		return this.props.list.map((li,index) =>
-			<NavLink key={index} to={li.Path}  className="left" activeClassName="selected">{li.Text}</NavLink>	
+			<NavLink key={index} to={li.Path}  className="left" activeClassName="selected" replace>{li.Text}</NavLink>	
 		);
 	}
 

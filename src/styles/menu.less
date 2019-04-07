@@ -7,6 +7,10 @@
 
     .nav {
         background-color: #EFF2F7;
+        background-color: #EFF2F7;
+        position: fixed;
+        height: 90vh;
+        overflow-y: scroll;
 
         .left {
             display: block;
@@ -20,6 +24,7 @@
             white-space: nowrap;
             border-bottom: 1px solid #ededed;
             color: #324057;
+            max-width: 260px;
 
             // font-weight: bold;
             &:active {
@@ -30,7 +35,7 @@
                 background-color: #8492A6;
             }
         }
-
+        
         .selected {
         	
             font-weight: bold;
@@ -39,7 +44,9 @@
             box-sizing: border-box;
         }
     }
-
+    .right{
+            margin-left: 300px;
+        }
     .contain {
         padding: 20px;
     }

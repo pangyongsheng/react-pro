@@ -1,10 +1,14 @@
-import React, { Component } from 'react';
 
-//组件 & Props
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-export default class Aa extends Component {
-    render() {
-        return <h1>Hello, {this.props.names}</h1>;
-    }
-}			
+const App = () => {
 
+ return (
+
+  <div>Hello world</div>
+
+ )
+
+}
+exports App;

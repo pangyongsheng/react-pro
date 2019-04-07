@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux';
 import todosReducer from './todos';
-import countReducer from './count'
+import countReducer from './count';
+import listReducer from './list'
 
 const allReducers = {
   Todos: todosReducer,
-  count: countReducer
+  count: countReducer,
+  list : listReducer
 }
 
 const rootReducer = combineReducers(allReducers);

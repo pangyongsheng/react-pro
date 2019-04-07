@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 //非受控组件
 export default class NameForm extends React.Component {
+    
     static defaultProps={
        items:[
             {id:"a",term:"张三",description:"daadadada"},
@@ -12,11 +13,13 @@ export default class NameForm extends React.Component {
 
     constructor(props) {
         super(props);
+
     }
 
 
 
     render() {
+        console.log(this.props.items);
         return (
             <dl>
                 {

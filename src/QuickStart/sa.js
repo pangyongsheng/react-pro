@@ -6,14 +6,17 @@ export default class Sa extends Component {
 	constructor(props) {
 		super(props);
 		this.textInput = React.createRef();
+		this.focusText = this.focusText.bind(this);
+		this.focusText2 = this.focusText2.bind(this);
 	}
 
-	focusText = () =>{
+	focusText(){
+		console.log(this);
 		console.log(this.textInput);
 		this.textInput.current.focus();
 	}
 
-	focusText2 = () =>{
+	focusText2(){
 		console.log(this.textInput2);
 		this.textInput2.focus();
 	}

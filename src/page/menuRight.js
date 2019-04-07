@@ -7,7 +7,7 @@ import { Route, Switch, Redirect  } from 'react-router-dom';
 import { Layout } from 'element-react';
 import 'element-theme-default';
 
-import  { A,B,C,D,E,F,G,H,I,J,K,L,M,N } from '../QuickStart';
+//import  { A,B,C,D,E,F,G,H,I,J,K,L,M,N, } from '../QuickStart';
 //
 export default class MenuRight extends Component{
 	constructor(props){

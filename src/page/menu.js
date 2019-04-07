@@ -25,7 +25,7 @@ export default class Aa extends Component {
 		        	<Layout.Col span="4">
 		        		<MenuLeft list={item}/>
 					</Layout.Col>
-					<Layout.Col span="20">
+					<Layout.Col span="20" className="right">
 					    <MenuRight list={item}/>
 		        	</Layout.Col>
 		        </Layout.Row>

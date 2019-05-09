@@ -18,6 +18,7 @@ export default class Aa extends Component {
 		this.handleChange = this.handleChange.bind(this);
 	}
 	handleChange(e){
+			console.log(this);
 		 this.props.onTemperatureChange(e.target.value);
 	}
 	render(){

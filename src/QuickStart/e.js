@@ -55,6 +55,8 @@ export default class Aa extends Component {
         } else {
             button = < LoginButton onClick = { this.handleLoginClick}/>;
         }
-        return ( <div ><Greeting isLoggedIn = { isLoggedIn }/> { button } </div>);
+        return ( <div >
+            <Greeting isLoggedIn = { isLoggedIn }/> { button } 
+        </div>);
     }
 }

@@ -11,13 +11,9 @@ import 'element-theme-default';
 
 export default class menuLeft extends Component {
 
-	static defaultProps : {
-		list:[
-			{to:"/a",name:"主页"},
-			{to:"/b",name:"state,生命周期"},
-			{to:"/c",name:"事件"}
-		]
-	}
+	// static defaultProps : {
+		
+	// }
 
 	constructor(props){
 		super(props)

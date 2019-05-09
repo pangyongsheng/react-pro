@@ -7,8 +7,6 @@ import {  Link, Route, Redirect,Switch} from 'react-router-dom';
 import { Layout } from 'element-react';
 import 'element-theme-default';
 
-
-
 import Head from './header'
 import MenuLeft from './menuLeft'
 import MenuRight from './menuRight'

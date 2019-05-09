@@ -13,6 +13,7 @@ module.exports = (env, argv) => {
             path.join(__dirname, './src/index.js')
         ],
         devServer: {
+            host: '192.168.187.252',
             port: 3003, //端口号
         },
         module: {

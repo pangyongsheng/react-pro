@@ -17,7 +17,7 @@ export function reduce() {
 
 export function getList() {
   return (dispatch) => {
-  		fetch('http://39.106.166.212:3000/api/tags')
+  	fetch('http://39.106.166.212:3000/api/tags')
 		.then(response => response.json())
 		.then(json => {
 			let a = json.tags.map((v)=>{

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Button } from 'element-react';
 //条件渲染
 class Aa extends Component {
     constructor(props) {
@@ -19,11 +20,26 @@ class Aa extends Component {
 
 
 export default class Dd extends Component {
+    constructor(props) {
+        super(props);
+        this.state={
+            a:true
+        }
+    }
+    change(){
+        console.log(this.state.a);
+        this.setState({
+            a:!this.state.a
+        })
+    }
     render(){
         return(
             <div>
+                <Button onClick = { (e) => this.change(e) } >點我</Button>
                 <Aa isLoggedIn={true}/>
                 <Aa isLoggedIn={false}/>
+                {this.state.a && <div>是</div> }
+                {!this.state.a && <div>否</div> }
             </div>
         )
     }

@@ -14,7 +14,6 @@ import store from './store.js';
 ReactDOM.render(
 	<Provider store={store}>
 		<Router>
-
 			<App/>
 		</Router>
 	</Provider>,
